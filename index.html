@@ -6,22 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Full Stack Session</title>
     <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+            text-decoration: none;
+        }
     .background{
-        width:250px;
-        height:250px;
-        box-sizing: border-box;
+        width:80vw;
+        height:50vh;
         background-color: fuchsia;
-        margin-top: 100px;
-        margin-left:100px;
-        margin-right: 100px;
-
         padding:50px 10px 10px 30px;
+    }
+    .parent{
+        background-color: aqua;
+        height:60px;
+        padding:10px;
+        width:50vw;
+    }
+    .child{
+        background-color: blueviolet;
+        height:40px;
+        width:80%;
+        
     }
     </style>
 </head>
 <body>
   <div class="background">
       <h2>Lorem ip</h2>
+      <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis impedit quas provident totam, repellat voluptate quod fuga. Veritatis corrupti porro officiis nulla ut! Possimus sequi excepturi tempora est aperiam magni.</span>
+      <span><a href="#">link</a></span>
+  </div>
+  <div class="parent">
+      <div class="child">
+
+      </div>
   </div>
 </body>
 </html>
