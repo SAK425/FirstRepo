@@ -4,44 +4,76 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Full Stack Session</title>
-    <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing: border-box;
-            text-decoration: none;
-        }
-    .background{
-        width:80vw;
-        height:50vh;
-        background-color: fuchsia;
-        padding:50px 10px 10px 30px;
+    <title>Positioning Task</title>
+</head>
+<style>
+    *{
+        margin:0;
+        padding: 0;
+        box-sizing: border-box;
     }
-    .parent{
-        background-color: aqua;
-        height:60px;
-        padding:10px;
-        width:50vw;
-    }
-    .child{
-        background-color: blueviolet;
-        height:40px;
-        width:80%;
+    div{
+        height: 75%;
+        width:25%;
+        left: 500px;
+        top:100px;
+        position: relative;
+        border-radius: 20px;
         
     }
-    </style>
-</head>
-<body>
-  <div class="background">
-      <h2>Lorem ip</h2>
-      <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis impedit quas provident totam, repellat voluptate quod fuga. Veritatis corrupti porro officiis nulla ut! Possimus sequi excepturi tempora est aperiam magni.</span>
-      <span><a href="#">link</a></span>
-  </div>
-  <div class="parent">
-      <div class="child">
+    img{
+        height:300px;
+        width:100%;
+        border-radius: 20px;
+    }
+    h1{
+        left:150px;
+        position: relative;
+    }
+    p{
+        
+        padding-left:10px;
+    }
+    h2{
+        background-color: crimson;
+        color: white;
+        width:150px;
+        border-radius:20px;
+        left:110px;
+        bottom: -10px;
+        position: relative;
+        padding-left:20px;
+        
+    }
+.icon{
+    background-color: crimson;
+    color:white;
+    border-radius: 100%;
+    height:50px;
+    width:50px;
+    position:relative;
+    top:-250px;
+    left:300px;
 
-      </div>
-  </div>
+
+}
+h4{
+    position:absolute;
+    padding: 15px;
+}
+    
+</style>
+<body>
+    <div>
+    <img src="https://static.amazon.jobs/locations/7/thumbnails/Paris_-_Thumbnail.jpg?1454183453"/>
+    <div class="icon"><h4>11<sup>th</sup></h4></div>
+    <h1>Paris</h1>
+    <p>Lorem ipsum dolor sit, amet consectetur<br>
+         adipisicing elit. Excepturi harum odit sed beatae soluta adipisci necessitatibus et tempore atque, ratione quisquam illo porro odio ut consectetur culpa autem placeat fugiat.</p>
+    
+       <h2>Visit Paris</h2>
+
+    </div>
+    
 </body>
 </html>
