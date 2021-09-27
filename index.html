@@ -13,41 +13,29 @@
         box-sizing: border-box;
 
     }
-   h2{
+   h2:nth-child(1){
        padding:5px;
        background-color: magenta;
        color: white;
+       transition-duration: 0.5s;
+       transition-timing-function: linear;
+     }
+   h2:nth-child(2){
+       padding:5px;
+       background-color: magenta;
+       color: white;
+       transition-duration: 0.5s;
+       transition-timing-function: ease-in;
    }
-   h2:hover{
-       background-color: maroon;
-       cursor: pointer;
-   }
-   div::selection{
-       background-color:grey;
-   }
-   input:focus{
-       background-color:pink;
-       color: red;
-       font-size: 2rem;
-   }
-    h2::before{
-        content:"I'm before";
-        font-size: 0.5rem;
-        color:purple;
-        position: relative;
-    }
-    h2::after{
-        content:"I'm after";
-        font-size: 0.5rem;
-        color:black;
-        position: relative;
-    }
+  h2:hover{
+      background-color:purple;
+      cursor: pointer;
+
+  }
 </style>
 <body>
    <h2>I'm a heading</h2>
-   <div>
-       Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa odio voluptatum iste illo molestias magni culpa tenetur voluptates similique? Amet, pariatur deserunt quisquam tempore sint aliquid? Rem provident fugit asperiores temporibus, sint eligendi officia quia labore tempora quaerat libero quos, fuga maiores, officiis sunt. Officia consectetur commodi dicta quam pariatur?
-   </div>
-  <input type="text"/>
+   <h2>I'm a heading</h2>
+  
 </body>
 </html>
