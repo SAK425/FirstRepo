@@ -13,21 +13,41 @@
         box-sizing: border-box;
 
     }
-    div.parent div:nth-child(even){
-            background-color: aqua;
-    } 
-    
- 
-    
+   h2{
+       padding:5px;
+       background-color: magenta;
+       color: white;
+   }
+   h2:hover{
+       background-color: maroon;
+       cursor: pointer;
+   }
+   div::selection{
+       background-color:grey;
+   }
+   input:focus{
+       background-color:pink;
+       color: red;
+       font-size: 2rem;
+   }
+    h2::before{
+        content:"I'm before";
+        font-size: 0.5rem;
+        color:purple;
+        position: relative;
+    }
+    h2::after{
+        content:"I'm after";
+        font-size: 0.5rem;
+        color:black;
+        position: relative;
+    }
 </style>
 <body>
-    <div class="parent">
-        <div>I'm a first div</div>
-        <div>I'm a second div</div>
-        <div>I'm a third div</div>
-        
-    </div>
-   
-
+   <h2>I'm a heading</h2>
+   <div>
+       Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa odio voluptatum iste illo molestias magni culpa tenetur voluptates similique? Amet, pariatur deserunt quisquam tempore sint aliquid? Rem provident fugit asperiores temporibus, sint eligendi officia quia labore tempora quaerat libero quos, fuga maiores, officiis sunt. Officia consectetur commodi dicta quam pariatur?
+   </div>
+  <input type="text"/>
 </body>
 </html>
