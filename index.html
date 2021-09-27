@@ -14,35 +14,43 @@
 
     }
     div.parent{
-        background-color: black;
-        color:white;
-        font-size:4rem;
+        display:flex;
+        align-items: stretch;
+        background-color: #111;
+        height:100vh;
     }
    
-  
-   @media(min-width:700px){
-       div.parent{
-           background-color: blueviolet;
+  div.child{
+      background-color: #ffbf00;
+      flex-basis: 80%;
+  }
+
+   div.sidebar{
+    background-color: crimson;
+            flex-basis: 20%;
+
+   }
+   @media (max-width: 550px) {
+            div.sidebar {
+                animation: 5s expand linear infinite;
+            }
+            div.child {
+                flex-basis: 100%;
+            }
+        }
+
+   @keyframes expand {
+       0%{
+           flex-basis: 0%;
+       }
+       100%{
+           flex-basis: 100%;
        }
    }
-   @media(max-width:200px){
-       div.parent{
-           background-color:yellow !important;
-       }
-   }
-   @media(max-width:500px){
-       div.parent{
-           background-color: orange;
-           font-size: 1.5rem;
-           
-       }
-   }
-   
 </style>
 <body>
     <div class="parent">
-       <h1>I'm a heading</h1>
-       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis, distinctio. Hic quo accusantium doloremque alias quibusdam dolores, pariatur fugiat sunt consequuntur, earum quasi quos corrupti, velit nostrum. Pariatur nemo unde rem veniam molestias necessitatibus natus. Voluptates quidem architecto inventore ipsam in quibusdam ipsum quam voluptatibus, minus dignissimos distinctio, esse voluptatem?
-    </div>
+        <div class="sidebar"></div>
+    <div class="child"></div>
    </body>
 </html>
