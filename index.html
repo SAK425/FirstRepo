@@ -9,33 +9,33 @@
 <style>
     *{
         padding:0;
-        margin:10px;
+        margin:0;
         box-sizing: border-box;
 
     }
-   h2:nth-child(1){
-       padding:5px;
-       background-color: magenta;
-       color: white;
-       transition-duration: 0.5s;
-       transition-timing-function: linear;
-     }
-   h2:nth-child(2){
-       padding:5px;
-       background-color: magenta;
-       color: white;
-       transition-duration: 0.5s;
-       transition-timing-function: ease-in;
-   }
-  h2:hover{
-      background-color:purple;
-      cursor: pointer;
+    div.parent{
+        background-color: black;
+         min-height: 200px;
+    }
+    div.child{
+        background-color: orange;
+        height: 100px;
+        width:100px;
+    border-radius: 50%; 
+    transition-duration: 0.5s;
+    transition-timing-function:ease-in;
+      
+ }
+ div.parent:hover div.child{
+     background-color: red;
+     transform: translateX(500px);
 
-  }
+ }
+   
 </style>
 <body>
-   <h2>I'm a heading</h2>
-   <h2>I'm a heading</h2>
-  
-</body>
+    <div class="parent">
+        <div class="child"></div>
+    </div>
+   </body>
 </html>
