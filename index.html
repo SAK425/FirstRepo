@@ -15,27 +15,34 @@
     }
     div.parent{
         background-color: black;
-         min-height: 200px;
+        color:white;
+        font-size:4rem;
     }
-    div.child{
-        background-color: orange;
-        height: 100px;
-        width:100px;
-    border-radius: 50%; 
-    transition-duration: 0.5s;
-    transition-timing-function:ease-in;
-      
- }
- div.parent:hover div.child{
-     background-color: red;
-     transform: translateX(500px);
-
- }
+   
+  
+   @media(min-width:700px){
+       div.parent{
+           background-color: blueviolet;
+       }
+   }
+   @media(max-width:200px){
+       div.parent{
+           background-color:yellow !important;
+       }
+   }
+   @media(max-width:500px){
+       div.parent{
+           background-color: orange;
+           font-size: 1.5rem;
+           
+       }
+   }
    
 </style>
 <body>
     <div class="parent">
-        <div class="child"></div>
+       <h1>I'm a heading</h1>
+       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis, distinctio. Hic quo accusantium doloremque alias quibusdam dolores, pariatur fugiat sunt consequuntur, earum quasi quos corrupti, velit nostrum. Pariatur nemo unde rem veniam molestias necessitatibus natus. Voluptates quidem architecto inventore ipsam in quibusdam ipsum quam voluptatibus, minus dignissimos distinctio, esse voluptatem?
     </div>
    </body>
 </html>
