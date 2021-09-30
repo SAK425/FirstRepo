@@ -41,7 +41,7 @@ arr.forEach(callbackFunction)*/
 /*arr.forEach((element,index)=>{
     console.log(element,index)
 })*/
-var button = document.querySelector('button')
+/*var button = document.querySelector('button')
 var input = document.querySelector('input')
 var list = document.querySelector('ul')
 const callback = (e)=>{
@@ -52,5 +52,11 @@ const callback = (e)=>{
     list.appendChild(element)
     console.log('sdf',e.target)
     console.log(input.value)
+}
+button.addEventListener('click',callback)*/
+var body=document.querySelector('body')
+var button = document.querySelector('button')
+const callback = (event)=>{
+body.classList.toggle('dark')
 }
 button.addEventListener('click',callback)
