@@ -1,62 +1,48 @@
+const op1 = document.querySelectorAll('input')[0]
+const op2 = document.querySelectorAll('input')[1]
+const add=document.querySelector("#add")
+const multiply = document.querySelector("#multiply")
+const subtract = document.querySelector("#subtract")
+const resultbox = document.querySelector('.result')
+/*
+const sum = ()=>{
+  const result =parseInt(op1.value) +parseInt( op2.value)
+  console.log(result)
+  resultbox.innerHTML = result
+  //resultbox.textContent = result
+}
+add.addEventListener('click',sum)
+console.log(op1,op2)
+const multiplynum = ()=>{
+    const result =op1.value * op2.value
+    console.log(result)
+    resultbox.innerHTML = result
+    //resultbox.textContent = result
+  }*/
+  const calculate = (event,operation)=>{
+   /* console.log(event.target)
+       if(operation=='add'){
+           console.log('adding')
+          
+       }else if(operation=='multiply'){
+           console.log('multiplying')
+       }
+*/
+switch(operation){
+    case "add":
+        resultbox.innerHTML = parseInt(op1.value) + parseInt(op2.value)
+        break
+    case "multiply":
+        resultbox.innerHTML = parseInt(op1.value) * parseInt(op2.value)
+        break
+    case "subtract":
+        resultbox.innerHTML = parseInt(op1.value) - parseInt(op2.value)
+        break
+}
+  }
 
-/*function greet(name='John',age=19){
-    console.log(age,name)
-}
-var greet = function(name='John',age=19){
-    console.log(age,name)
-}
-greet();
-//console.log(add(10,20))
-//function add(a = 0, b = 0) {
-  // var sum = a + b
-   //return sum
-//}
-
-/*var add = function (a = 0, b = 0) {
-    var sum = a + b
-    return sum
-}*/
-
-
-/*var add=(a=0,b=0)=>{
-    var sum = a+b
-    return sum
-}
-var add=(a=0,b=0)=>a+b
-console.log(add(10,20))
-
-const greet =(name)=>{
-    return 'hi '+name
-}
-console.log(greet("Sakshi"))*/
-
-//var arr=['Go to the GYM','Eat Food','Clean House']
-/*for (var i=0;i<arr.length;i++){
-    console.log(arr[i])
-}*/
-/*var callbackFunction = (element,index) =>{
-    console.log(element,index)
-}
-arr.forEach(callbackFunction)*/
-/*arr.forEach((element,index)=>{
-    console.log(element,index)
-})*/
-/*var button = document.querySelector('button')
-var input = document.querySelector('input')
-var list = document.querySelector('ul')
-const callback = (e)=>{
-    const inputvalue = input.value
-    const element = document.createElement('li')
-    const textNode = document.createTextNode(inputvalue)
-    element.appendChild(textNode)
-    list.appendChild(element)
-    console.log('sdf',e.target)
-    console.log(input.value)
-}
-button.addEventListener('click',callback)*/
-var body=document.querySelector('body')
-var button = document.querySelector('button')
-const callback = (event)=>{
-body.classList.toggle('dark')
-}
-button.addEventListener('click',callback)
+add.addEventListener('click',(event)=>calculate(event,'add'))
+multiply.addEventListener('click',(event)=>{
+calculate(event,'multiply')
+})
+subtract.addEventListener('click',(event)=>calculate(event,'subtract'))
