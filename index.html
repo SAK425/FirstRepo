@@ -6,8 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <script src="./assets/javascript/app.js"></script>
     <title>Todo list</title>
-    <style></style>
+    <style>
+        body{
+            background-color: white;
+        }
+        .dark{
+            background-color: black;
+            color:white;
+        }
+    </style>
 </head>
 
 <body>
@@ -15,9 +24,39 @@
       <main>
         <div class="heading">
           <h2>TODO LIST</h2>
-          
+          <label class="switch">
+              <input type="checkbox">
+              <span class="slider round"></span>
+          </label>
         </div>
+        <div class="inputbox">
+            <input type="text" placeholder="Add items to the list...">
+            <button id="addbtn">+</button>
+        </div>
+        <div class="content">
+        <div class="list_content">
+            <div class="list_heading">
+                <div>Items</div>
+                <div>
+                    <a href="#">All</a>
+                    <a href="#">Pending</a>
+                    <a href="#">Completed</a>
+                </div>
+                <button id="clearbtn">
+                    Clear
+                </button>
+            </div>
+            </div>
+            <div class="actual_list">
+             <ul>
+                 <li>Go to Gym</li>
+                 <li>Eat</li>
+                 <li>Do Study</li>
+             </ul>  
+             
+            </div>
         
+       </div>
       </main>
     </header>
    

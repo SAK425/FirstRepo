@@ -9,6 +9,14 @@
     font-family: "Poppins";
     text-decoration: none;
 }
+body{
+    background-color: white;
+    color: black;
+}
+.dark{
+    background-color: black;
+    color: white;
+}
 header{
     background-image:url('../Images/day.jpg');
     height: 300px;
@@ -50,42 +58,143 @@ div.inputbox{
     display:flex;
     justify-content: space-between;
     margin-top: 0px;
-    background-color:#f1f1f1;
+    background-color:white;
     color:black;
-    
+    align-items: center;
+    border-radius: 5px;   
 }
 div.inputbox input{
-    flex-basis:90%;
+    flex-basis:92%;
     font-size: 1.2rem;
-    background-color: #f1f1f1;
+    background-color:white;
     padding-left: 10px;
     color:black;
-    border-color: #f1f1f1;
+    height: 20px;
+    border:none;
+    
+    
 }
-div.inputbox button{
- flex-basis: 10%;
- font-size: 1.5rem;
- background-color: rgba(128, 128, 128, 0.753);
+.inputbox input:focus{
+    outline: none;
+    border:none;
+}
+#addbtn{
+ flex-basis: 8%;
+ font-size: 1.8rem;
+ color: #4f4dde;
+ background-color: white;
+ border:none;
+ border-radius: 5px;
 
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color:white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color:yellow;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+    background-color: crimson;
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+ input:checked + .slider:after{
+      background-color: crimson;
+  }
+    
+div.content{
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: #eeeeee;
+    min-height:100px;
+    justify-content: space-evenly;
+    margin-top: 60px;
 }
 div.list_content{
     display: flex;
     justify-content: space-evenly;
-    margin-top: 70px;
-    background-color:grey;
+    width: 95%;
+    border-radius: 10px;
+    margin: 5px;
     flex-direction: column;
-    color:black;
+    height: 50px;
+    background-color:white;
+    padding:10px;
+    color:blueviolet;
 }
 div.list_content .list_heading{
+
 display:flex;
+align-items: center;
 justify-content: space-between;
+padding: 5px;
 }
-div.actual_list{
-    margin-left: 20px;
-    padding:10px;
+#clearbtn{
+    border:none;
+    background-color: white;
 }
-.actual_list ul{
-    border: 0.5px;
+div.list_content .actual_list{
+background-color: white;
+color: black;
+display: flex;
+justify-content: space-between;
+align-items: center;
+border-radius:10px;
+height: 50px;
+padding: 5px;
+width:95%;
+
+}
+
+.actual_list ul li{
+    height:50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    padding-left: 10px;
+    margin:10px;
+    border-radius: 10px;
 }
 /* footer styles */
 img.social{
