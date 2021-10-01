@@ -1,48 +1,29 @@
-const op1 = document.querySelectorAll('input')[0]
-const op2 = document.querySelectorAll('input')[1]
-const add=document.querySelector("#add")
-const multiply = document.querySelector("#multiply")
-const subtract = document.querySelector("#subtract")
-const resultbox = document.querySelector('.result')
-/*
-const sum = ()=>{
-  const result =parseInt(op1.value) +parseInt( op2.value)
-  console.log(result)
-  resultbox.innerHTML = result
-  //resultbox.textContent = result
-}
-add.addEventListener('click',sum)
-console.log(op1,op2)
-const multiplynum = ()=>{
-    const result =op1.value * op2.value
-    console.log(result)
-    resultbox.innerHTML = result
-    //resultbox.textContent = result
-  }*/
-  const calculate = (event,operation)=>{
-   /* console.log(event.target)
-       if(operation=='add'){
-           console.log('adding')
-          
-       }else if(operation=='multiply'){
-           console.log('multiplying')
-       }
-*/
-switch(operation){
-    case "add":
-        resultbox.innerHTML = parseInt(op1.value) + parseInt(op2.value)
-        break
-    case "multiply":
-        resultbox.innerHTML = parseInt(op1.value) * parseInt(op2.value)
-        break
-    case "subtract":
-        resultbox.innerHTML = parseInt(op1.value) - parseInt(op2.value)
-        break
-}
-  }
+/*var arr = [1,2,3,4,5]
 
-add.addEventListener('click',(event)=>calculate(event,'add'))
-multiply.addEventListener('click',(event)=>{
-calculate(event,'multiply')
+arr.shift()
+console.log(arr)
+new_arr = []
+//var new_arr = arr.slice(2,4)
+//console.log(new_arr)
+
+for(var i=0;i<arr.length;i++){
+    if(arr[i]%2===0)
+    new_arr.push(arr[i])
+}
+console.log(new_arr)
+
+var new_arr=arr.filter((element,index)=>{
+    if(element % 2===0)
+    return true
 })
-subtract.addEventListener('click',(event)=>calculate(event,'subtract'))
+console.log(new_arr)
+
+var new_arr1=arr.filter((element,index)=>{
+    if(element > 4)
+    return true
+})
+console.log(new_arr1)*/
+var arr1 = [1,2,3,4,5,6,7,8]
+
+arr1.splice(3,3)
+console.log(arr1)
