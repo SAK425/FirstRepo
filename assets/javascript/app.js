@@ -1,14 +1,31 @@
-function Appendl(){
-var input = document.querySelector("input")
-var list=document.querySelector("#li_elements")
-
-    const element = document.createElement('li')
-    const inputvalue = input.value
-    const textNode = document.createTextNode(inputvalue)
-    element.appendChild(textNode)
-    list.appendChild(element)
-    document.getElementById.innerHTML = list
+/*if(true){
+    console.log(Name)
     
-
+    if(true){
+        var Name = "ferari"
+    }
 }
+const print=()=>{
+    var Name = "Mercedes"
+    if(true){
+        console.log(Name)
+    }
+    return Name
+}
+print()
 
+console.log(this.alert('Hi'))*/
+
+let car = {
+    name:"C Class",
+    manufacturer:"Mercedes",
+    print:()=>{
+
+      console.log(`${car.name} was created by ${car.manufacturer}`)
+    }
+}
+console.log(Object)
+console.log(car)
+console.log(car.hasOwnProperty('name'))
+console.log(Object.keys(car))
+console.log(Object.values(car))
