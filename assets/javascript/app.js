@@ -1,22 +1,14 @@
-var inputvalue = document.querySelector('input');
-var button = document.querySelector('#addbtn');
-var list = document.querySelector('ul');
-/*
-const callback = ()=>{
-    const inputvalue = input.value;
+function Appendl(){
+var input = document.querySelector("input")
+var list=document.querySelector("#li_elements")
+
     const element = document.createElement('li')
-    const textnode=document.createTextNode(inputvalue)
-    element.appendChild(textnode)
+    const inputvalue = input.value
+    const textNode = document.createTextNode(inputvalue)
+    element.appendChild(textNode)
     list.appendChild(element)
+    document.getElementById.innerHTML = list
+    
+
 }
-button.addEventListener('click',callback)
-*/
 
-
-
-var body=document.querySelector('body')
-var button = document.querySelector('.switch')
-const callback = ()=>{
-body.classList.toggle('dark')
-}
-button.addEventListener('checked',callback)

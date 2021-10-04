@@ -6,21 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <script src="./assets/javascript/app.js"></script>
+    <script defer src="./assets/javascript/app.js"></script>
     <title>Todo list</title>
-    <style>
-        body{
-            background-color: white;
-        }
-        .dark{
-            background-color: black;
-            color:white;
-        }
-    </style>
+    
 </head>
 
 <body>
-    <header>
+    <header></header>
       <main>
         <div class="heading">
           <h2>TODO LIST</h2>
@@ -30,14 +22,14 @@
           </label>
         </div>
         <div class="inputbox">
-            <input type="text" placeholder="Add items to the list...">
-            <button id="addbtn">+</button>
+            <input type="text" placeholder="Add items to the list..."/>
+            <input type="button" onclick="Appendl()" id="addbtn" value="+"/>
         </div>
         <div class="content">
         <div class="list_content">
             <div class="list_heading">
                 <div>Items</div>
-                <div>
+                <div class="menu">
                     <a href="#">All</a>
                     <a href="#">Pending</a>
                     <a href="#">Completed</a>
@@ -46,19 +38,18 @@
                     Clear
                 </button>
             </div>
-            </div>
+        </div>
+        
             <div class="actual_list">
-             <ul>
-                 <li>Go to Gym</li>
-                 <li>Eat</li>
-                 <li>Do Study</li>
+             <ul id="li_elements">  
              </ul>  
              
             </div>
+
         
-       </div>
+        </div>
       </main>
-    </header>
+    
    
     <footer>
         <div>
