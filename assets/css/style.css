@@ -148,7 +148,7 @@ div.content{
     flex-direction: column;
     overflow-y: auto;
     background-color: #eeeeee;
-   height:150px;
+  min-height:80px;
     justify-content: space-evenly;
     margin-top: 60px;
     
