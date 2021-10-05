@@ -1,13 +1,15 @@
-function Appendl(){
-    var input = document.querySelector("#Txtinput").value
-    var list=document.querySelector("#li_elements")
-    
-        const element = document.createElement('li')
-        
-        const textNode = document.createTextNode(input)
-        element.appendChild(textNode)
-        list.appendChild(element)
-        document.getElementById.innerHTML = list
-        
-    
-    }
+/*let value = new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+        reject('Hello')
+    },1000)
+})
+
+console.log(value)
+setTimeout(()=>{
+    console.log(value)
+},3000)*/
+
+let response = fetch("https://jsonplaceholder.typicode.com/users").then(res=>res.json()
+).then(data=>{
+    console.log(data)
+})
