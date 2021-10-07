@@ -164,7 +164,7 @@ div.list_content{
     height: 50px;
     background-color:white;
     padding:10px;
-    color:blueviolet;
+    font-size: 0.9rem;
 
 }
 div.list_content .list_heading{
@@ -206,6 +206,21 @@ width:95%;
     padding-left: 10px;
     margin:10px;
     border-radius: 10px;
+    user-select: none;
+    transition: 0.2s;
+}
+ul li.checked{
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    content:"";
+    position: absolute;
+    height: 15px;
+    width:7px;
+    transform: rotate(45deg);
+    border-color: #fff;
+    top:10px;
+    left:15px;
 }
 /* footer styles */
 img.social{
