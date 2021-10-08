@@ -43,17 +43,69 @@ btn.addEventListener('click',search)*/
 
 const button = document.querySelector('button')
 const input = document.querySelector('input')
-
+const list = document.querySelector('ul')
+const parent=document.querySelector('.grid')
 const getData = async (item) => {
     const url = `https://api.edamam.com/search?app_id=bd51454f&app_key=3b359328e30cad3141319969dfedaba9&q=${item}`
+    
     console.log(url)
     const res = await fetch(url)
     const data = await res.json()
+    const receipies=data.hits
+    receipies.forEach(item => {
+        const {recipe} = item
+        
+        const {label,image,source,calories} = recipe
+        
+        const template=`
+        <img class="card__image" src="${image}" />
+        <div class="card__data">
+            <div class="card__info">
+                <h2>${label}</h2>
+                <p>From ${source}</p>
+            </div>
+            <h3 class="card__price">${calories.toFixed(2)}</h3>
+            <button class="card__add">+</button>
+        </div>
+    `
+    const newcard=document.createElement('article')
+    newcard.setAttribute('class','card')
+    newcard.setAttribute('style','margin-bottom:50px')
+    newcard.innerHTML = template
+ console.log(newcard)
+       parent.appendChild(newcard)
+    });
+   
     
-    console.log(data.hits)
 }
+
+
 
 //  add event listener to the button
 button.addEventListener('click', (e) => {
     getData(input.value)
+    parent.innerHTML=""
 })
+
+/*
+let greet = new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+        resolve("Hello")
+    },5000)
+})
+greet.then((value)=>{
+      console.log(value)
+      return "Welcome again"
+}).then(newValue=>{
+    console.log(newValue)
+})
+let response = fetch('https://jsonplaceholder.typicode.com/todos/10')
+
+console.log(response)
+
+response.then(data=>{
+ return data.json()
+}).then(content =>{
+    console.log(content)
+})
+*/
