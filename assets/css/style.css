@@ -222,6 +222,13 @@ ul li.checked::before{
     top:10px;
     left:15px;
 }
+.minusbtn{
+    width:20px;
+    height: 20px;
+    border:none;
+    position: relative;
+    right: 2px;
+}
 /* footer styles */
 img.social{
     width:20px;
