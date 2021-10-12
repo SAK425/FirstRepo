@@ -1,31 +1,7 @@
-/*const {add,subtract,multiply,divide,message}=require('./utility')
-
-add()
-subtract()
-multiply()
-divide()
-console.log(message)
-
-*/
-
-
-const button=document.querySelector('button')
-const input=document.querySelector('input')
-const div = document.querySelector('div')
-const arr=[10,11,12,13,14]
-//localStorage.setItem('val',arr)
-//console.log(localStorage.getItem('val'))
-console.log(arr)
-//console.log(JSON.stringify(arr))
-localStorage.setItem('val',JSON.stringify(arr))
-console.log(localStorage.getItem('val'))
-console.log(typeof(localStorage.getItem('val')))
-console.log(JSON.parse(localStorage.getItem('val')))
-//const arr=localStorage.getItem('InputValue')
-//console.log(typeof(arr))
-/*
-button.addEventListener('click',(req,res)=>{
-    localStorage.setItem("InputValue",[1,2,4,5])
-    div.innerHTML = input.value;
-})
-*/
+const path = require('path')
+console.log(path.resolve('./app.js'))
+console.log(path.relative('/',"./temp/utility.js"))
+console.log(path.extname('./app.js'))
+console.log(path.dirname('./temp/utility.js'))
+console.log(__dirname)
+console.log(path.join(__dirname,'app.js'))
