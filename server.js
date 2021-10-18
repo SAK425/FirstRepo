@@ -1,6 +1,8 @@
 const express = require('express')
 const app = express()
-const PORT = 3000
+const PORT = 3001
+const database = require('./database/db')
+/*
 const token = "TOP_SECRET"
 app.use(express.json())
 let products = [{ name: 'iPhone12 Case', price: '999' }, { name: 'iPhone13 Case', price: '1199' }, { name: 'iPhone13 Pro Case', price: '1499' }]
@@ -38,4 +40,9 @@ app.post('/auth',(req,res)=>{
 app.listen(PORT, () => {
     console.log(`Server started at port ${PORT}`)
     
+})*/
+app.use(express.json())
+
+app.listen(3001,()=>{
+    console.log("Listening at  port 3001")
 })
